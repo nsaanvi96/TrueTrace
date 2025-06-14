@@ -1,40 +1,110 @@
 body {
+  margin: 0;
+  padding: 0;
   width: 300px;
-  padding: 10px;
-  font-family: Arial, sans-serif;
+  min-height: 400px;
+  font-family: 'Montserrat', sans-serif;
+  background: url('TrueTrace (3).png') no-repeat center center;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-h1 {
-  font-size: 18px;
+
+
+.container {
   text-align: center;
+  padding: 20px;
+  z-index: 1;
 }
 
-div {
-  margin: 10px 0;
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 30px;
 }
 
-input[type="file"], input[type="text"] {
+/* Decorative lines and circles on either side of the title */
+.title::before,
+.title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 2px;
+  background: #ffffff;
+}
+
+.title::before {
+  left: 20px;
+}
+
+.title::after {
+  right: 20px;
+}
+
+.title::before {
+  border-left: 8px solid #ffffff;
+  border-radius: 50%;
+}
+
+.title::after {
+  border-right: 8px solid #ffffff;
+  border-radius: 50%;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  margin: 15px 0 5px 0;
+}
+
+.input-field {
   width: 100%;
-  padding: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  background: rgba(42, 82, 152, 0.5); /* Semi-transparent blue */
+  border: none;
+  border-radius: 25px;
+  color: #ffffff;
+  font-size: 14px;
   box-sizing: border-box;
+}
+
+.input-field::placeholder {
+  color: #cccccc;
 }
 
 button {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
-  color: white;
+  margin: 15px 0;
+  background: #ffffff;
+  color: #1e3c72;
   border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 700;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background: #e0e0e0;
 }
 
 #result {
-  margin-top: 10px;
+  margin: 15px 0;
   padding: 10px;
-  border: 1px solid #ccc;
-  min-height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-size: 14px;
+  min-height: 20px;
+  text-align: center;
 }
+

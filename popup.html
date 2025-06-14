@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>TrueTrace</title>
   <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>TrueTrace</h1>
-  <div>
-    <label for="mediaInput">Upload Image for Deepfake Check:</label>
-    <input type="file" id="mediaInput" accept="image/*">
+  <div class="container">
+    <h1 class="title">TrueTrace</h1>
+    <h2 class="heading">Doubting of Deepfake?!</h2>
+    <input type="file" id="mediaInput" accept="image/*" class="input-field">
+    <h2 class="heading">Suspicious Link?!</h2>
+    <input type="text" id="urlInput" placeholder="Enter to find out" class="input-field">
+    <button id="analyzeBtn">Analyze</button>
+    <div id="result">Result will appear here</div>
+ 
   </div>
-  <div>
-    <label for="urlInput">Enter URL for Phishing Check:</label>
-    <input type="text" id="urlInput" placeholder="https://example.com">
-  </div>
-  <button id="analyzeBtn">Analyze</button>
-  <div id="result">Result will appear here</div>
   <script src="popup.js"></script>
 </body>
 </html>
